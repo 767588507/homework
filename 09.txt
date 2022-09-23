@@ -1,0 +1,23 @@
+using System;
+
+namespace _09
+{
+    class FreeDown
+    {
+        static void Main(string[] args)
+        {
+            double height = 100;
+            double mi = 100;
+            for (int i = 2; i <= 10; i++)
+            {
+                if (i == 2)
+                    mi = mi * i;
+                else
+                    mi += height;
+                height = height / 2;
+            }
+            Console.WriteLine("第十次共经过" + mi + "米，反弹" + height + "米");
+            Console.ReadKey();
+        }
+    }
+}
