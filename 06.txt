@@ -1,0 +1,24 @@
+using System;
+
+namespace _06
+{
+    class Publicount
+    {
+        static void Main(string[] args)
+        {
+            int m = int.Parse(Console.ReadLine());
+            int n = int.Parse(Console.ReadLine());
+            int maxs = m * n;
+            int yu = m % n;
+            while (yu != 0)
+            {
+                m = n;
+                n = yu;
+                yu = m % n;
+            }
+            Console.WriteLine("最小公倍数" + maxs / n );
+            Console.WriteLine("最大公约数" + n);
+            Console.ReadKey();
+        }
+    }
+}
