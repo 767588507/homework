@@ -1,0 +1,30 @@
+using System;
+namespace _01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("输出前多少项：");
+            int n = int.Parse(Console.ReadLine());//将内容转换为整数类型
+            for (int i = 1; i <= n; i++)
+            {
+                int rs = RecurisiveClass.Fabonaci(i);
+                Console.WriteLine(rs + "\t");
+                if (i % 5 == 0)
+                    Console.WriteLine();
+            }
+            Console.ReadKey();
+        }
+    }
+    public class RecurisiveClass
+    {
+        public static int Fabonaci(int index)
+        {
+            if (index < 3)
+                return 1;
+            else
+                return Fabonaci(index - 1) + Fabonaci(index - 2);
+        }
+    }
+}
